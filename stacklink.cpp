@@ -1,6 +1,5 @@
 //Asbiq Al Alawi 1817051026
 #include <iostream>
-#include <iomanip>
 #define MAX_STACK_SIZE 10
 
 using namespace std;
@@ -17,11 +16,11 @@ class stack{
 		
 	public:
 		
-		void set(){
+		void set(){//Fungsi inisiasi
 			tumpuk.top = -1;
 		}
 		
-		bool isEmpty(){
+		bool isEmpty(){//Fungsi untuk stack kosong
 			if (tumpuk.top == -1){
 				return 1;
 			}
@@ -30,7 +29,7 @@ class stack{
 			}
 		}
 		
-		bool isFull(){
+		bool isFull(){//Fungsi untuk stack penuh
 			if (tumpuk.top == MAX_STACK_SIZE -1){
 				return 1;
 			}
@@ -39,7 +38,7 @@ class stack{
 			}
 		}
 		
-		void push(int input){
+		void push(int input){//Fungsi untuk menambahkan stack (push)
 			if (isFull()){
 				cout<<"\t\t\t\t\t\tStack Full\n\n";
 			}
@@ -60,7 +59,7 @@ class stack{
 			}
 		}
 		
-		void pop(){
+		void pop(){//Fungsi untuk mengurangi stack (pop)
 			if (isEmpty()){
 				cout<<"\t\t\t\t\t\tStack kosong\n\n";
 			}
@@ -73,7 +72,7 @@ class stack{
 			}
 		}
 		
-		void top(){
+		void top(){//Fungsi untuk menentukan top stack
 			if (isEmpty()){
 				cout<<"\t\t\t\t\t\tStack kosong\n\n";
 			}
@@ -82,12 +81,12 @@ class stack{
 			}
 		}
 		
-		void print(){
+		void print(){//Fungsi untuk menampilkan stack
 			if (isEmpty()){
 				cout<<"\t\t\t\t\t\tStack kosong\n\n";
 			}
 			else{
-				cout<<"\t\t\t\t\t\tisi Stack :\n";
+				cout<<"\t\t\t\t\t\tIsi Stack :\n";
 				anggota *ptr = new anggota;
 				ptr = head;
 				while (ptr != NULL){
@@ -99,7 +98,7 @@ class stack{
 		}
 };
 
-int main (){
+int main (){//Fungsi utama
 	stack s;
 	int menu, input;
 	s.set();
